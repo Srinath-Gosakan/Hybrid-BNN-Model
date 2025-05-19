@@ -18,7 +18,7 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 input_dim = 43  # Adjust based on your input features
 
 model = HybridCNN_MLP_Bayesian(input_dim=input_dim).to(device)
-model.load_state_dict(torch.load('model\hybrid_model.pkl', map_location=device))
+model.load_state_dict(torch.load('model/hybrid_model.pkl', map_location=device))
 model.eval()
 
 # CORS settings (allow all origins)
